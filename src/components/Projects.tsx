@@ -44,12 +44,12 @@ export default function Projects() {
   const [modalProject, setModalProject] = useState<ProjectForModal | null>(null);
 
   return (
-    <section id="projects" className="relative px-4 py-24 md:px-8 lg:px-12">
+    <section id="projects" className="relative px-4 py-16 sm:py-20 md:px-8 md:py-24 lg:px-12">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="font-heading text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl"
+        className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl"
       >
         Engineered Projects
       </motion.h2>
@@ -57,12 +57,12 @@ export default function Projects() {
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="mt-2 text-xl text-white/60 md:text-2xl"
+        className="mt-1 text-lg text-white/60 sm:mt-2 sm:text-xl md:text-2xl"
       >
         Builds that ship
       </motion.p>
 
-      <div className="mt-14 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-10 grid grid-cols-1 gap-6 sm:mt-14 sm:gap-8 md:gap-10 lg:grid-cols-2 xl:grid-cols-3">
         {PROJECTS.map((p, i) => (
           <ProjectCard
             key={p.title}
